@@ -34,6 +34,8 @@ set backspace=indent,eol,start "设置退格
 set fileencodings=utf-8,gb2312,gbk,gb18030 "设置文件编码，解决中文问题
 
 filetype plugin indent on "开启文件插件
+set completeopt+=longest
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
 
 "vundle配置
@@ -47,8 +49,21 @@ call vundle#rc()
 " required!
 Bundle 'gmarik/vundle'
 
-" vim-scripts repos
-Bundle 'vim-plugin-foo'
-Bundle 'vim-plugin-bar'
+" setting of nerdtree
+Bundle 'scrooloose/nerdtree'
+let NERDTreeWinPos='left'
+let NERDTreeWinSize=31
+let NERDTreeChDirMode=1
+"F2 打开nerdtree
+nmap <f2> :NERDTreeToggle <CR>
+"F7 新开一个tab标签
+map f7 :tabnew<CR>
+"F5 前一个tab标签
+map f5 :tabp<CR>
+"F6 后一个tab标签
+map f6 :tabn<CR>
+
+" setting of nerdcommenter
+Bundle 'scrooloose/nerdcommenter'
 
 filetype plugin indent on    " required!
