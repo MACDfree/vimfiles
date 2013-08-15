@@ -54,6 +54,16 @@ autocmd FileType python setlocal et sta sw=4 sts=4
 
 autocmd FileType python setlocal foldmethod=indent
 
+"taglist设置
+"let Tlist_Auto_Open=1
+"set tags=tags;
+"set autochdir
+
+"pydiction设置
+let g:pydiction_location='/home/macd/.vim/bundle/Pydiction/complete-dict'
+let g:pydiction_menu_hight=20
+
+
 "vundle配置
 set nocompatible    " be iMproved
 filetype off        " required!
@@ -92,5 +102,7 @@ Bundle 'garbas/vim-snipmate'
 Bundle 'honza/vim-snippets'
 
 Bundle 'nathanaelkane/vim-indent-guides'
+
+Bundle 'vim-scripts/Pydiction'
 
 filetype plugin indent on    " required!
