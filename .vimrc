@@ -27,7 +27,7 @@ set showtabline=2 "一直显示标签页
 set laststatus=2  "一直显示状态栏
 
 "配色方案
-colorscheme blue
+colorscheme evening
 set t_Co=256 "设定vim支持256色
 
 set fileencodings=utf-8,gb2312,gbk,gb18030 "设置文件编码，解决中文问题
